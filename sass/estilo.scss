@@ -15,24 +15,54 @@ $fuente-grande: 1.4em;
 $tipografia-general: arial, verdana, sans-serif;
 $tipografia-alternativa: 'Times New Roman', Times, serif;
 
-// VARIABLES
+// ANIDACIÓN
 
-body {
-    color: $color-texto;
-    font-family: $tipografia-general;
+.cajadestacada {
+    background-color: red;
+
+    header {
+        background-color: black;
+        color: #fff;  
+
+        a {
+            color: #ff6;
+        }
+    }
 }
 
-h1 {
-    background-color: $color-primario;
-    color: $color-blanco;
-    font-family: $tipografia-alternativa;
-    font-size: $fuente-grande;
-    padding: $espaciado-estandar;
-    text-transform: uppercase;
-    border-radius: 12px;
+// & SE REFIERE AL ELEMENTO PADRE
+
+a.dinamico {
+    color: red;
+    &:hover {
+        background-color: #ff6;
+    }
 }
 
-div.destacado {
-    border: 1px solid $color-secundario;
-    padding: $espaciado-estandar $espaciado-doble;
+// & SE SUSTITUIRÍA POR EL NOMBRE DEL ELEMENTO PADRE
+
+.form {
+    margin: 10px;
+    padding: 15px;
+    &--black {
+        color: #fff;
+        background-color: #000;
+    }
+    &__submit {
+        color: red;
+        &--desactivado {
+            color: #999;
+        }
+    }
+}
+
+// SE PUEDEN ANIDAR PROPIEDADES QUE COMPARTEN LA MISMA RAIZ
+
+h2 {
+    color: #666;
+    font: {
+        family: verdana;
+        weight: bold;
+        size: 0.9em;
+    }
 }
