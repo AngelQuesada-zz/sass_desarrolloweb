@@ -46,4 +46,12 @@ h1.invertido {
 .contenedor_encabezados h3 {
   font-size: 1.5rem; }
 
+h1 {
+  background-color: blanchedalmond;
+  color: brown;
+  font-family: 'Times New Roman', Times, serif; }
+
+h1 {
+  font-size: 2em; }
+
 /*# sourceMappingURL=estilo.css.map */

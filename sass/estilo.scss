@@ -101,3 +101,21 @@ h1.invertido {
 .contenedor_encabezados {
     @include encabezados(2rem)
 }
+
+// HERENCIA
+
+// Este código no se verá en la hoja procesada a no ser que se llame
+// desde algún sitio
+
+%heading {
+    background-color: blanchedalmond;
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+// DIRECTIVA @extend
+
+h1 {
+    @extend %heading;
+    font-size:2em;
+}
