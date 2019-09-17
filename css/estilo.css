@@ -28,4 +28,22 @@ h2 {
   font-weight: bold;
   font-size: 0.9em; }
 
+h1.invertido {
+  font-size: 1.3em;
+  padding: 15px;
+  background-color: #111;
+  color: #eee; }
+
+.escalada {
+  -webkit-transform: scale(2, 3);
+  -ms-transform: scale(2, 3);
+  transform: scale(2, 3); }
+
+.contenedor_encabezados h1 {
+  font-size: 2rem; }
+.contenedor_encabezados h2 {
+  font-size: 1.8rem; }
+.contenedor_encabezados h3 {
+  font-size: 1.5rem; }
+
 /*# sourceMappingURL=estilo.css.map */

@@ -19,6 +19,7 @@
     }
 }
 
+
 // & SE REFIERE AL ELEMENTO PADRE
 
 a.dinamico {
@@ -54,4 +55,49 @@ h2 {
         weight: bold;
         size: 0.9em;
     }
+}
+
+// DECLARACIÓN MIXIN
+
+@mixin color-invertido {
+    background-color: #111;
+    color: #eee;
+}
+
+// INVOCACIÓN DE UN MIXIN
+
+h1.invertido {
+    font-size: 1.3em;
+    padding: 15px;
+    @include color-invertido;
+}
+
+// DECLARACIÓN MIXIN CON PARÁMETROS
+
+@mixin transformar($propiedad) {
+    -webkit-transform: $propiedad;
+    -ms-transform: $propiedad;
+    transform: $propiedad;
+}
+
+@mixin encabezados($tamano) {
+    h1 {
+      font-size: $tamano;
+    }
+    h2 {
+      font-size: $tamano - 0.2;
+    }
+    h3 {
+      font-size: $tamano - 0.5;
+    }
+}
+
+// INVOCACIÓN DE UN MIXIN CON PARÁMETROS
+
+.escalada {
+    @include transformar(scale(2,3));
+}
+
+.contenedor_encabezados {
+    @include encabezados(2rem)
 }
